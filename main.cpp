@@ -59,7 +59,7 @@ int main (int argc,char *argv[]){
 		phrase(arr,d,m,len);
 		
 	}
-	outputRes(output,m,char_num,len,line_num,n,arr,d)
+	outputRes(output,m,char_num,len,line_num,n,arr,d);
 return 0;
 }
 //int main()
