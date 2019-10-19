@@ -2,8 +2,8 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
-#include<string.h>  
 #include <stdlib.h>
+#include "CountLine.h"
 using namespace std;
 struct str{
 	string name;
@@ -33,42 +33,14 @@ buf.put(ch);
 return buf.str();
 }
 
- void outputRes(char *output)
-{
-	char *data;
-	data=output;
-	char way[]="./";
-	int charactersNumber,wordsNumb,linesNumb,showTimeLines;
-	double showTime;
-	string name="monday tuesday wednesday";
-	charactersNumber=2;
-	wordsNumb=1;
-	linesNumb=1;
-	showTimeLines=2;
-	showTime=3;	
-	strcat(way,output);
-	cout<<way; 
-	ofstream outfile;
-	outfile.open(way);
-	outfile<<"characters: "<<charactersNumber<<endl;
-	outfile<<"words: "<<wordsNumb<<endl;
-	outfile<<"lines: "<<linesNumb<<endl;
-	
-	for(int i=0;i<showTimeLines;i++)
-	{
-		outfile<<"<"<<name<<">: "<<showTime<<endl;
-	}
-	outfile.close();
-}
 int main()
 {
-	//文件名
-	char fn[]="input.txt";
-	char output[]="output.txt";
-	
-	string str;
-	str=readFileIntoString(fn);
-	outputRes(output);
-  
+//文件名
+char * fn="input.txt";
+string stri;
+stri=readFileIntoString(fn);
+printf("%c",stri[12]);
+printf("%d",countline(stri));  
 }
+
 
