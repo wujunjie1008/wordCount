@@ -6,16 +6,14 @@
 #include "CountLine.h"
 #include "solveInput.h"
 #include "SummaryChars.h" 
+#include "judgeword.h"
+#include "sort_word.h"
+#include "word_group.h"
+#include "output.h"
+#include "h.h"
 using namespace std;
-struct str{
-	string name;
-	int count;	//name出现次数，单词计数用 
-	int flag;	//0为非字符 
-	int flag1; 	//判断是否遍历过,单词计数用
-	int flag2; 	//判断是否输出过,单词计数用
-	bool ifend; //是否在文末，词组计数用 
-};
-
+struct number arr[10000];
+struct number arr1[10000];
 struct final_word{	//单词结果 
 	
 };
@@ -24,6 +22,7 @@ struct final_group{	//词组结果
 };
 
 int main (int argc,char *argv[]){
+	struct ph d[10000];
 	int m = -1, n = 10;
 	char *input;
 	char *output;
@@ -51,8 +50,16 @@ int main (int argc,char *argv[]){
 	str=readFileIntoString(input);
 	line_num = countline(str);	//行数 
 	str = change_small(str);	//变小写 
-	printf("字符数：%d",summaryChars(str));
-	cout<<str;
+	int len = chuli(arr,str);
+	int char_num = summaryChars(str);
+	if(m==0)
+	sort_word(arr,arr1,len,n);
+	else
+	{
+		phrase(arr,d,m,len);
+		
+	}
+	outputRes(output,m,char_num,len,line_num,n,arr,d)
 return 0;
 }
 //int main()

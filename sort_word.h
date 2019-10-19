@@ -3,8 +3,9 @@
 #include <sstream>
 #include <iostream>
 #include <stdlib.h> 
+#include "h.h"
 using namespace std;
-void sort_word(struct str arr,struct str arr1,int len,int n)
+void sort_word(struct number *arr,struct number *arr1,int len,int n)
 {
 		
 	int i,j;
@@ -21,13 +22,10 @@ void sort_word(struct str arr,struct str arr1,int len,int n)
 					arr[j].flag1=1;
 				}
 			}
-		    
 		}
 	}
 	arr[9999].count=0;
 	arr[9999].flag=1;
-	
-	
 	int max=0,k=0;
 	for(j=0;j<n;j++)
 	{
@@ -55,11 +53,10 @@ void sort_word(struct str arr,struct str arr1,int len,int n)
 		arr[max].flag2=1;
 		k++;
 	}
-	for(i=0;i<n;i++)
+	for(int i=0;i<n;i++)
 	{
 		cout<<arr1[i].name<<endl;
 		cout<<arr1[i].count<<endl;
 		cout<<endl;
 	}
-	
 }
