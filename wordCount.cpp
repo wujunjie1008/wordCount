@@ -37,11 +37,11 @@ int main (int argc,char *argv[]){
 		}
 		if(strcmp(argv[i], "-m") == 0){
 			i++;
-			m = *argv[i] - 48;
+			m = atoi(argv[i]);
 		}
 		if(strcmp(argv[i], "-n") == 0){
 			i++;
-			n = *argv[i] - 48;
+			n = atoi(argv[i]);
 		}
 	}
 	int line_num;	
