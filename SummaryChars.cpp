@@ -2,6 +2,11 @@
 #include<string>
 #include<cstring>
 #include<fstream>
+#include <string.h>
+#include <fstream>
+#include <sstream>
+#include <iostream>
+#include <stdlib.h>
 #include<cstdlib>
 using namespace std;
 int summaryChars(char *str)
@@ -14,14 +19,4 @@ int summaryChars(char *str)
 		}
 	}
 	return count;
-}
-int main()
-{
-
-	char str[] = "asd vre cx		zdf -=sds\n\nSD axSGs aXz"; 
-	cout<<"Chars num:"<<summaryChars(str);
-	/*for(int i=0;i<str.length();i++)
-	{
-		
-	}*/
 }

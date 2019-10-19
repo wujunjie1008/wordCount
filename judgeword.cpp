@@ -69,7 +69,7 @@ int main(){
 	int num;
 	num=chuli(xx,arr,input);
 	for (int i=0;i<num;i++){//输出每个单词 
-		cout<<arr[i].word<<endl;
+		cout<<arr[i].word<<' '<<arr[i].end<<endl;
 	}
 	
 	return 0;

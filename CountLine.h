@@ -1,8 +1,7 @@
-#include <string>
+#include <string.h>
 #include <fstream>
 #include <sstream>
 #include <iostream>
-  
 #include <stdlib.h>
 using namespace std;
 int countline(string stri)

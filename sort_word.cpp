@@ -1,3 +1,9 @@
+#include <string.h>
+#include <fstream>
+#include <sstream>
+#include <iostream>
+#include <stdlib.h> 
+using namespace std;
 void sort_word(struct str arr,struct str arr1,int len,int n)
 {
 		
