@@ -1,0 +1,5 @@
+WordCount.exe -i input1.txt -o output1.txt
+WordCount.exe -i input3.txt -o output3.txt -m 3 -n 20
+WordCount.exe -i input5.txt -o output5.txt -n 15
+WordCount.exe -i input7.txt -o output7.txt
+WordCount.exe -i input13.txt -o output13.txt -m 3

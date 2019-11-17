@@ -9,7 +9,6 @@ void outputRes(char *output,int m,int char_num,int word_num,int line_num,int n,s
 	data=output;
 	char way[]="./";
 	int charactersNumber,wordsNumb,linesNumb,showTimeLines;
-	
 	charactersNumber=char_num;
 	wordsNumb=word_num;
 	linesNumb=line_num;
@@ -21,18 +20,22 @@ void outputRes(char *output,int m,int char_num,int word_num,int line_num,int n,s
 	outfile<<"characters: "<<charactersNumber<<endl;
 	outfile<<"words: "<<wordsNumb<<endl;
 	outfile<<"lines: "<<linesNumb<<endl;
-	if(m>0)	
+	if(m>1)	
 	{
 		for(int i=0;i<showTimeLines;i++)
 		{
-		outfile<<"<"<<d[i].cizu<<">: "<<d[i].num<<endl;
+			if(d[i].cizu.empty())
+				break; 
+			outfile<<"<"<<d[i].cizu<<">: "<<d[i].num<<endl;
 		}
 	}
 	else
 	{
 		for(int i=0;i<showTimeLines;i++)
 		{
-		outfile<<"<"<<arr[i].name<<">: "<<arr[i].count<<endl;
+			if(arr[i].name.empty())
+				break; 
+			outfile<<"<"<<arr[i].name<<">: "<<arr[i].count<<endl;
 		}
 	}
 	outfile.close();

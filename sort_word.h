@@ -27,12 +27,16 @@ void sort_word(struct number *arr,struct number *arr1,int len,int n)
 	arr[9999].count=0;
 	arr[9999].flag=1;
 	int max=0,k=0;
+	if(len<n)
+	{
+		n = len;
+	}
 	for(j=0;j<n;j++)
 	{
 		max=9999;
 		for(i=0;i<len;i++)
 		{
-			if(arr[i].flag==1&&arr[i].flag1==0&&arr[i].flag2==0)
+			if(arr[i].flag==1&&arr[i].flag2==0)
 			{
 				if(arr[i].count>arr[max].count)
 				{
@@ -41,7 +45,7 @@ void sort_word(struct number *arr,struct number *arr1,int len,int n)
 				}
 				else if(arr[max].count==arr[i].count)
 				{
-					if(arr[max].name.compare(arr[i].name)>0)
+					if(arr[max].name > arr[i].name)
 					{
 						max=i;
 					}
@@ -53,10 +57,5 @@ void sort_word(struct number *arr,struct number *arr1,int len,int n)
 		arr[max].flag2=1;
 		k++;
 	}
-	for(int i=0;i<n;i++)
-	{
-		cout<<arr1[i].name<<endl;
-		cout<<arr1[i].count<<endl;
-		cout<<endl;
-	}
+
 }

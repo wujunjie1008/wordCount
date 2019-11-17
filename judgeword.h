@@ -43,6 +43,7 @@ int chuli(struct number *arr,string input){//返回单词数量(所有)
 			arr[temp].name = wd;
 			if(strlen(xx)<4){
 				arr[temp].flag=0;
+				temp--;
 			}
 			else
 			{

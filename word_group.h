@@ -17,6 +17,7 @@ using namespace std;
 
 void phrase(struct number *a, struct ph *d, int m, int len){//a为结构体数组、m为词组包含词数、q为词个数 
 	struct ph b[10000];
+	struct ph b1[10000];
 	int n=0;
 	//string cz[100]; 
 	//printf("%d ",sizeof(*a));

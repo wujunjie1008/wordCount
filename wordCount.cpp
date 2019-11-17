@@ -23,7 +23,7 @@ struct final_group{	//词组结果
 
 int main (int argc,char *argv[]){
 	struct ph d[10000];
-	int m = -1, n = 10;
+	int m = 1, n = 10;
 	char *input;
 	char *output;
 	for(int i = 0 ; i < argc; i++){
@@ -52,14 +52,14 @@ int main (int argc,char *argv[]){
 	str = change_small(str);	//变小写 
 	int len = chuli(arr,str);
 	int char_num = summaryChars(str);
-	if(m==0)
+	if(m==1)
 	sort_word(arr,arr1,len,n);
 	else
 	{
 		phrase(arr,d,m,len);
 		
 	}
-	outputRes(output,m,char_num,len,line_num,n,arr,d);
+	outputRes(output,m,char_num,len,line_num,n,arr1,d);
 return 0;
 }
 //int main()
