@@ -1,0 +1,5 @@
+characters: 42
+words: 8
+lines: 1
+<bbbb aaaa bbbb>: 3
+<aaaa bbbb aaaa>: 1

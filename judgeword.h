@@ -43,13 +43,14 @@ int chuli(struct number *arr,string input){//返回单词数量(所有)
 			arr[temp].name = wd;
 			if(strlen(xx)<4){
 				arr[temp].flag=0;
-				temp--;
+				num--;
 			}
 			else
 			{
 				for (int k=0;k<(strlen(xx)<4?strlen(xx):4);k++){//判断是否是个合法的单词 
 				if (!zifu(xx[k])){
 					arr[temp].flag=0;
+					num--;
 					break;
 				}	
 				else
@@ -57,11 +58,12 @@ int chuli(struct number *arr,string input){//返回单词数量(所有)
 				}
 			}
 			temp++;
+			num++;
 			memset(xx,'\0',sizeof(xx));
 		}
 	}
 	
-	return temp; 
+	return num; 
 }
 //int main(){
 //	char input[] = "hellow world\n\n!sjda file wOr!f world123 a#alskjd\n\n\nadaxzc askjda asDFhjd askjda hajks$sadjlka aSkjdA \na45%ssaas xzkjqw, sa8sda  \n";

@@ -26,25 +26,34 @@ void phrase(struct number *a, struct ph *d, int m, int len){//a为结构体数组、m为
 
 	string c ="";//临时存放字符串 
 	for(int i=0; i<len; i++){
-
+		if(a[i].flag==0) 
+			continue; 
 		for(int l=0;l<m;l++){
 			//printf("%d ",a[i].flag);
 			//printf("%s",a[i].ifend==false?"FALSE":"TRUE");
-			if((a[i+l].flag==0) ||((a[i+l].ifend==true) && l!=m-1)){
+			if((a[i+l].flag==0) || (a[i+l].ifend==true && l!=m-1)){
 				//printf("%d 跳过\n",i);
-				c = "";
+				c.clear();
+				l = 0;
 				break;
-			}//非单词直接break，移到下一位、 在m内遇见行末单词，直接break，移到下一位 
-			c =  c+a[i+l].name+' ';//可以直接加空格吗 
-			//printf("%s ",a[i].name.c_str());
-			//printf("%d ",a[i].ifend );
+			}//非单词直接break，移到下一位、 在m内遇见行末单词，直接break，移到下一位
+			else
+			{
+				if(l==m-1)
+					c = c+a[i+l].name;//可以直接加空格吗 
+				else
+					c = c+a[i+l].name+' ';
+				//printf("%s ",a[i].name.c_str());
+				//printf("%d ",a[i].ifend );
+				
+				if(l==m-1){
+					b[n].cizu = c;//将m个已经串好的字符串传入ph结构体 				
+					n++;
+					//printf("%s\n",c.c_str());    // 调用c_str()函数
+					c = "";
+				}
+			} 
 			
-			if(l==m-1){
-				b[n].cizu = c;//将m个已经串好的字符串传入ph结构体 				
-				n++;
-				//printf("%s\n",c.c_str());    // 调用c_str()函数
-				c = "";
-			}
 		}
 	
 	}
@@ -76,8 +85,6 @@ void phrase(struct number *a, struct ph *d, int m, int len){//a为结构体数组、m为
 			d[j] = b[i];
 			j++;
 			
-			//printf("%d\n",e);
-			
 		}
 	} 
 	//printf("%d\n",e);
@@ -87,6 +94,20 @@ void phrase(struct number *a, struct ph *d, int m, int len){//a为结构体数组、m为
 		for (int j = i + 1; j < n; j++)
 		{
 			if (d[i].num < d[j].num)
+			{
+				temp.cizu = d[i].cizu;
+				temp.f = d[i].f;
+				temp.num = d[i].num;
+
+				d[i].cizu = d[j].cizu;
+				d[i].f = d[j].f;
+				d[i].num = d[j].num;
+
+				d[j].cizu = temp.cizu;
+				d[j].f = temp.f;
+				d[j].num = temp.num;
+			}
+			else if(d[i].num == d[j].num && d[i].cizu > d[j].cizu)
 			{
 				temp.cizu = d[i].cizu;
 				temp.f = d[i].f;
