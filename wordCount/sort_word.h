@@ -24,8 +24,8 @@ void sort_word(struct number *arr,struct number *arr1,int len,int n)
 			}
 		}
 	}
-	arr[9999].count=0;
-	arr[9999].flag=1;
+	arr[999].count=0;
+	arr[999].flag=1;
 	int max=0,k=0;
 	if(len<n)
 	{
@@ -33,7 +33,7 @@ void sort_word(struct number *arr,struct number *arr1,int len,int n)
 	}
 	for(j=0;j<n;j++)
 	{
-		max=9999;
+		max=999;
 		for(i=0;i<len;i++)
 		{
 			if(arr[i].flag==1&&arr[i].flag2==0)

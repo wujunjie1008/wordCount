@@ -12,8 +12,8 @@
 #include "output.h"
 #include "h.h"
 using namespace std;
-struct number arr[10000];
-struct number arr1[10000];
+struct number arr[1000];
+struct number arr1[1000];
 struct final_word{	//单词结果 
 	
 };
@@ -22,7 +22,7 @@ struct final_group{	//词组结果
 };
 
 int main (int argc,char *argv[]){
-	struct ph d[10000];
+	struct ph d[1000];
 	int m = 1, n = 10;
 	char *input;
 	char *output;
