@@ -1,8 +1,0 @@
-characters: 40
-words: 5
-lines: 2
-<friday>: 1
-<monday>: 1
-<thursday>: 1
-<tuesday>: 1
-<wednesday>: 1

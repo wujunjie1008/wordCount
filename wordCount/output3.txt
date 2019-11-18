@@ -1,0 +1,23 @@
+characters: 5087
+words: 503
+lines: 15
+<generative adversarial network>: 3
+<embodied question answering>: 2
+<resolution face from>: 2
+<adversarial network based>: 1
+<agent must first>: 1
+<also show that>: 1
+<asks questions that>: 1
+<challenging dataset wider>: 1
+<clevr train data>: 1
+<closely mimics natural>: 1
+<curriculum when learning>: 1
+<data consistently matches>: 1
+<dataset wider face>: 1
+<detecting small faces>: 1
+<detection performance outperforms>: 1
+<detection techniques have>: 1
+<differs from standard>: 1
+<during training time>: 1
+<face detection techniques>: 1
+<finding tiny faces>: 1
